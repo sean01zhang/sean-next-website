@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
+  --background-start-rgb: 232, 233, 239;
   --background-end-rgb: 255, 255, 255;
 }
 
@@ -24,4 +24,126 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+@font-face {
+  font-family: "Computer Modern Serif";
+  src: url("../public/fonts/cmu/cmunrm.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Computer Modern Serif Bold";
+  src: url("../public/fonts/cmu/cmunbx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Computer Modern Upright Italic";
+  src: url("../public/fonts/cmu/cmunui.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Computer Modern Sans Serif";
+  src: url("../public/fonts/cmu/cmunss.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Computer Modern Sans Serif DC";
+  src: url("../public/fonts/cmu/cmunssdc.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Computer Modern Typewriter Text";
+  src: url("../public/fonts/cmu/cmuntt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  font-family: "Computer Modern Sans Serif";
+  margin-bottom: 10px;
+  line-height: normal;
+}
+
+h1 {
+  font-family: "Computer Modern Serif Bold";
+  font-size: 28px;
+}
+
+h2 {
+  font-family: "Computer Modern Serif Bold";
+  font-size: 24px;
+}
+
+h3 {
+  font-family: "Computer Modern Serif Bold";
+  font-size: 18px;
+}
+
+h4 {
+  font-family: "Computer Modern Sans Serif";
+  font-size: 18px;
+}
+
+h6 {
+  font-family: "Computer Modern Sans Serif DC";
+  font-size: 16px;
+}
+
+ul {
+  font-family: "Computer Modern Sans Serif";
+  /* list-style-type: disc;
+  list-style-position: inside; */
+  margin-bottom: 10px;
+}
+
+/* li {
+  font-family: "Computer Modern Typewriter Text";
+} */
+
+.menubutton {
+  box-shadow: 4px 4px 0px 0px #000;
+  background-size: 100% 200%;
+  background-image: linear-gradient(0deg, rgba(240,214,252,1) 50%, rgba(255,255,255,1) 50%);
+  background-position: 0% 0%;
+  align-items: flex-end;
+  transition: background-position 0.3s;
+}
+
+.menubutton:hover {
+  /* align-items: flex-start; */
+  background-position: 0% 100%;
+}
+
+@keyframes slidein {
+  0% {
+    opacity: 0%;
+    transform: translateX(20%);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0%;
+    transform: translateY(20%);
+  }
+
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
 }
