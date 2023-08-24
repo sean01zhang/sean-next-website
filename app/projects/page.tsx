@@ -18,7 +18,7 @@ const projectList = [
             href="https://research.nvidia.com/publication/2020-07_spatiotemporal-reservoir-resampling-real-time-ray-tracing-dynamic-direct"
             className="underline"
           >
-            Nvidia's ReSTIR paper
+            Nvidia{"'"}s ReSTIR paper
           </a>
         </p>
         <p>Interactive web demo coming soon!</p>
@@ -36,8 +36,8 @@ const projectList = [
       <>
         <p>
           My first attempt at shader programming. I rewrote the path tracer in
-          Ray Tracing in One Weekend using Apple's Metal shaders and their C++
-          bindings, <b>metal-cpp</b> which netted a 60x speed-up.
+          Ray Tracing in One Weekend using Apple{"'"}s Metal shaders and their
+          C++ bindings, <b>metal-cpp</b> which netted a 60x speed-up.
         </p>
         <p>
           Reference:{" "}

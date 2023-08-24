@@ -42,7 +42,7 @@ export default function Fun() {
           Links:
           <li>
             <Link className="underline" href="/notes/csclub/office-s23">
-              Office Manager's S23 Notes
+              Office Manager{"'"}s S23 Notes
             </Link>
           </li>
           <li>

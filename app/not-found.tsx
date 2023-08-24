@@ -18,7 +18,7 @@ export default function Error404() {
         }}
       >
         <h2>404 - Page Not Found</h2>
-        <p>Sorry, but it looks like this page wasn't found.</p>
+        <p>Sorry, but it looks like this page was not found.</p>
       </div>
     </main>
   );
