@@ -1,6 +1,6 @@
 {
   "name": "sean-next-website",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -29,7 +29,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.22.10",
     "@babel/preset-react": "^7.22.5",
-    "@cloudflare/next-on-pages": "^1.5.1",
+    "@cloudflare/next-on-pages": "^1.0.2",
     "@mdx-js/loader": "^2.3.0"
   }
 }
