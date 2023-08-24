@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-08-24 Thu 02:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Help Pls</title>
+<meta name="author" content="Sean Zhang" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Help Pls</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4b6f613">1. Introduction</a></li>
+<li><a href="#org5739fe7">2. Membership</a>
+<ul>
+<li><a href="#orgf7fd53e">2.1. Signing People Up</a></li>
+<li><a href="#org8dd4ecc">2.2. Renewing Members</a></li>
+</ul>
+</li>
+<li><a href="#orge5c15fc">3. Payment</a>
+<ul>
+<li><a href="#org0747c4c">3.1. Alternative Forms of Payment</a></li>
+</ul>
+</li>
+<li><a href="#org8aae4af">4. Ceo</a>
+<ul>
+<li><a href="#org61c93b3">4.1. Add/Renew User</a></li>
+<li><a href="#org118298c">4.2. Club Reps</a></li>
+</ul>
+</li>
+<li><a href="#org789d099">5. Swag Purchases</a></li>
+</ul>
+</div>
+</div>
+<style>
+blockquote {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #9ec3e2;
+    /* border-left: 2px solid #1481e3; */
+    /* border-left-color: rgb(255, 228, 102); */
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    font-family: "Comic Sans MS", "Comic Sans", sans-serif;
+}
+
+.quote-danger {
+    background-color: #ffe5e5;
+    border-left: 2px solid #e53939;
+}
+
+.quote-question {
+    background-color: #def2ed;
+    border-left: 2px solid #4ed4b2;
+}
+
+.quote-answer {
+    background-color: #e5f3ff;
+    border-left: 2px solid #1481e3;
+}
+
+.quote-head {
+    margin-right: 10px;
+    font-weight: bold;
+    font-variant: small-caps;
+    
+}
+
+.quote-answer .quote-head {
+    color: #1481e3;
+    /* border-bottom: 2px solid #1481e3; */
+}
+
+.quote-question .quote-head {
+    color: #4ed4b2;
+    /* border-bottom: 2px solid #4ed4b2; */
+}
+
+.quote-warning {
+    background-color: #FFF8DC;
+    border-left: 2px solid #ffeb8e;
+}
+
+.choices {
+    padding-top: 10px;
+}
+</style>
+
+<div id="outline-container-org4b6f613" class="outline-2">
+<h2 id="org4b6f613"><span class="section-number-2">1.</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Here is a quick refresher on some of the main
+responsibilities as office staff. <br />
+</p>
+
+<p>
+Good luck - your S23 OM.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5739fe7" class="outline-2">
+<h2 id="org5739fe7"><span class="section-number-2">2.</span> Membership</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Here is the rough gameplan if someone asks you about membership. 
+</p>
+
+<blockquote class="quote-question">
+<div class="quote-head">[Them]</div>
+Hi, I am looking to buy a CSC membership
+</blockquote>
+
+<blockquote class="quote-answer">
+<div class="quote-head">[You]</div>
+Have you signed up for CSC before? <br>
+<div class="choices">
+<tt>[ Yes ] [ No ] [ Maybe ]</tt>
+</div>
+</blockquote>
+
+<ul class="org-ul">
+<li>If they say <b>[YES]</b> (Previous Member), then continue to <a href="#org8dd4ecc">renewing members</a>.</li>
+<li>If they say <b>[NO]</b> (New Member), then continue to <a href="#orgf7fd53e">signing people up</a>.</li>
+<li>If maybe, you can check if someone is a member in <a href="#org8aae4af"><code>ceo</code></a>.</li>
+</ul>
+</div>
+
+<div id="outline-container-orgf7fd53e" class="outline-3">
+<h3 id="orgf7fd53e"><span class="section-number-3">2.1.</span> Signing People Up</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Here, you need to do 2 things before taking their money.
+</p>
+<ol class="org-ol">
+<li>Ask to see their watcard.</li>
+<li>Have them sign the Machine Usage Agreement</li>
+</ol>
+
+<blockquote class="quote-question">
+<div class="quote-head">[Them]</div>
+I want to sign up for CSC<br>
+</blockquote>
+<blockquote class="quote-answer">
+<div class="quote-head">[You]</div>
+Great! Do you have your watcard on you? <br>
+<div class="choices">
+<tt>[ Give WatCard ] [ Leave ]</tt>
+</div>
+</blockquote>
+
+<p>
+You will need to confirm their identity in 2 ways:
+</p>
+<ol class="org-ol">
+<li>Make sure the photo on the card is them</li>
+<li>Later on when you register them in <a href="#org8aae4af"><code>ceo</code></a> make sure that the name that is autofilled matches
+the name on their watcard (the first name in <code>ceo</code> will be their legal name or preferred name,
+if they have one).</li>
+<li>You may return their watcard after the <a href="#org8aae4af"><code>ceo</code></a> step is completed.</li>
+</ol>
+
+<blockquote class="quote-answer">
+<div class="quote-head">[You]</div>
+Ok, before I sign you up, I need you to agree to our <b>Machine Usage Agreement</b>.
+Since CSC provides many computer resouces that you can use,
+we have a few rules that you need to agree to. Here is a quick summary:
+<ul>
+<li>Don't share your account with anyone.</li>
+<li>Don't hog/abuse resources. There is more
+information about this on our wiki,
+<a href="https://wiki.csclub.uwaterloo.ca">wiki.csclub.uwaterloo.ca</a>.
+And if you have further questions, ask <em>Syscom</em>.
+</li>
+<li>Don't mine crypto.</li>
+<li>Don't do anything illegal. <em>No pirating, sharing copyrighted content, etc.</em></li>
+<li>CSC Resources are for personal/course work only. This means you cannot be
+hosting company websites, or running your startup idea here.</li>
+</ul>
+
+If you want more information, go to: <tt>[ <a href="https://csclub.ca">csclub.ca</a>
+> Resources > Machine Usage Agreement ]</tt>
+<br>
+<div class="choices">
+<tt>[ Agree and Sign MUA ] [ Give up ]</tt>
+</div>
+</blockquote>
+
+<p>
+Once the user signs, you will also have sign and date below their signature.
+Next, you have to take <a href="#orge5c15fc">payment</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8dd4ecc" class="outline-3">
+<h3 id="org8dd4ecc"><span class="section-number-3">2.2.</span> Renewing Members</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+All you need to do here is ask for how many terms they want to renew for.
+</p>
+
+<blockquote class="quote-warning">
+<b>Note:</b> We can only accept multi-term renewals in <b>cash</b>.
+</blockquote>
+
+<blockquote class="quote-question">
+<div class="quote-head">[Them]</div>
+I want to renew my membership<br>
+</blockquote>
+<blockquote class="quote-answer">
+<div class="quote-head">[You]</div>
+How many terms do you want to renew for? <br>
+<div class="choices">
+<tt>[ Integer > 0 ] [ Never mind ]</tt>
+</div>
+</blockquote>
+
+<p>
+Next, you have to take <a href="#orge5c15fc">payment</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge5c15fc" class="outline-2">
+<h2 id="orge5c15fc"><span class="section-number-2">3.</span> Payment</h2>
+<div class="outline-text-2" id="text-3">
+<blockquote class="quote-danger">
+<b>We cannot process card payments.</b> So, only cash can be taken in the office (and at events).
+</blockquote>
+
+<blockquote class="quote-danger">
+<b>Please do not mix money between the different cups</b>
+(Membership is the blue cup, Swag is the red one).
+If you need to make change, do it within the same cup that the money is going into.
+</blockquote>
+
+<p>
+There are 3 cups where payment goes into:
+</p>
+<ol class="org-ol">
+<li>Membership (A blue cup with a lid)</li>
+<li>Swag (A red solo cup)</li>
+<li>Pop/Snacks (A cup inside the fridge)</li>
+</ol>
+
+<p>
+You must put the money into the correct cup for whichever purhcase they are making.
+(i.e. If they give you a $20 bill for swag and a membership, you must split the money
+correctly).
+</p>
+</div>
+
+<div id="outline-container-org0747c4c" class="outline-3">
+<h3 id="org0747c4c"><span class="section-number-3">3.1.</span> Alternative Forms of Payment</h3>
+<div class="outline-text-3" id="text-3-1">
+<ul class="org-ul">
+<li><p>
+<b>MathSoc Office</b>: They can go the MathSoc office to purchase CSC Stuff (i.e. Membership and Swag).
+</p>
+<blockquote class="quote-warning">
+<b>Note:</b> We can only accept multi-term renewals in <b>cash</b>.
+</blockquote>
+<p>
+<b>THEY MUST</b> bring back the reciept as proof, and you can then sign them up.
+<b>The Reciept goes inside of the cup for whatever they are buying (Membership or Swag).</b>
+</p></li>
+<li><b>WUSA Store</b>: Coming Soon<sup>TM</sup></li>
+</ul>
+
+<p>
+Once you have taken payment, <b>do not let the person go!</b> You need to fill in their
+name and quest ID if they're buying <a href="#org789d099">swag</a>, and you need their quest ID
+for <a href="#org8aae4af">processing their membership on ceo</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8aae4af" class="outline-2">
+<h2 id="org8aae4af"><span class="section-number-2">4.</span> Ceo</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+To sign people up, or renew their memberships, or checking their membership status,
+you must first login to the csc servers, and run <code>ceo</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-bash">ssh &lt;my-watiam-id&gt;@hfcs.csclub.uwaterloo.ca
+# once logged in
+ceo
+</pre>
+</div>
+
+<p>
+It will prompt you for your CSC password.
+Once in ceo, it'll look like this:
+</p>
+
+<pre class="example">
+                            CSC Electronic Office
+
+           Members   &lt; Add user                                            &gt;
+                     &lt; Renew user                                          &gt;
+                     &lt; Get user info                                       &gt;
+                     &lt; Reset password                                      &gt;
+                     &lt; Change login shell                                  &gt;
+
+            Groups   &lt; Add group                                           &gt;
+                     &lt; Get group members                                   &gt;
+                     &lt; Add member to group                                 &gt;
+                     &lt; Remove member from group                            &gt;
+
+         Databases   &lt; Create database                                     &gt;
+                     &lt; Reset database password                             &gt;
+
+         Positions   &lt; Get positions                                       &gt;
+                     &lt; Set positions                                       &gt;
+
+
+
+
+
+Press q or Esc to quit
+</pre>
+
+<p>
+To control, use your <code>arrow</code> keys, and press <code>enter</code> to select items. You can also
+just type into fields that need to be filled.
+</p>
+
+<p>
+As office staff, you do not need to worry about most of these things,
+you will usually only need to touch:
+</p>
+<ul class="org-ul">
+<li>Add user</li>
+<li>Renew user</li>
+<li>Get user info</li>
+</ul>
+</div>
+
+<div id="outline-container-org61c93b3" class="outline-3">
+<h3 id="org61c93b3"><span class="section-number-3">4.1.</span> Add/Renew User</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Once in these menus, all you need to do is fill
+in the <code>[ Username ]</code> field, and the <code>[ Number of Terms ]</code> field.
+The rest are filled in for you.
+</p>
+
+<p>
+<b>Note on <code>Membership Type</code>:</b> If someone asks about club reps, just tell them to
+email syscom, unless you know how this works.
+</p>
+
+<p>
+Make sure that you have fully completed signup/renewal before letting
+the person go (in case anything goes wrong).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org118298c" class="outline-3">
+<h3 id="org118298c"><span class="section-number-3">4.2.</span> Club Reps</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+CSC provides services to other clubs at Waterloo. Thus, they need a representative
+from their club to have access to CSClub services so that they can manage their
+Club's stuff on CSC servers.
+</p>
+
+<blockquote class="quote-warning">
+<b>Note: </b>Any inquiries regarding Club Reps should be handled by Syscom, so tell them to
+send an email to Syscom.
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org789d099" class="outline-2">
+<h2 id="org789d099"><span class="section-number-2">5.</span> Swag Purchases</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+If they are buying swag, make sure to fill out the swag purchases form before they
+leave. You will need their WATIAM ID (quest username) and their name.
+</p>
+
+<blockquote class="quote-danger">
+<b>If they bought multiple items, you will need to fill out the form once for each
+item they bought.</b> I know this sucks, but that's just how it is. Sorry.
+</blockquote>
+</div>
+</div>
+</div>
+</body>
+</html>

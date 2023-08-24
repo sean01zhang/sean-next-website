@@ -1,0 +1,1629 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-08-24 Thu 02:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Notes</title>
+<meta name="author" content="Sean Zhang" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Notes</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1b048b6">1. Overview</a></li>
+<li><a href="#org5ddd8bd">2. Office Budget Request</a>
+<ul>
+<li><a href="#org29e4668">2.1. Thunderbolt Docks</a></li>
+<li><a href="#org5199e7a">2.2. Cleaning supplies</a></li>
+<li><a href="#org9571f0f">2.3. Office Supplies</a></li>
+</ul>
+</li>
+<li><a href="#orgfcddeea">3. CSC Office Expenditures</a>
+<ul>
+<li><a href="#org55e0331">3.1. Office Supplies</a></li>
+<li><a href="#org9be30b5">3.2. Pop Purchased</a>
+<ul>
+<li><a href="#org91973ff">3.2.1. Pop Run June 2nd 2023</a></li>
+<li><a href="#orgf86c57e">3.2.2. Pop Run June 15th 2023</a></li>
+<li><a href="#org2929979">3.2.3. Pop Run Jul 12th 2023</a></li>
+</ul>
+</li>
+<li><a href="#orge37ca9e">3.3. Pop Stock</a>
+<ul>
+<li><a href="#org705484a">3.3.1. Graph of Pop Stock Over Time</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org63d3ad9">4. Issues</a>
+<ul>
+<li><a href="#org7d99cdb">4.1. <span class="done DONE">DONE</span> Membership Inquiries</a></li>
+<li><a href="#org74b2e3c">4.2. <span class="todo TODO">TODO</span> Discuss Makerspace</a></li>
+<li><a href="#org548defd">4.3. <span class="done DONE">DONE</span> Office Acquisition of Stuff</a></li>
+<li><a href="#orgb2288c0">4.4. <span class="done DONE">DONE</span> CSC Awards</a>
+<ul>
+<li><a href="#orge857579">4.4.1. <span class="done DONE">DONE</span> Decide on a date</a></li>
+<li><a href="#org24a0f34">4.4.2. <span class="done DONE">DONE</span> Prepare Awards to be handed out</a></li>
+<li><a href="#org47e8740">4.4.3. Suggested Awards</a></li>
+<li><a href="#orgb442f6c">4.4.4. Award Details</a></li>
+<li><a href="#org6aab04c">4.4.5. Monologue</a></li>
+<li><a href="#org4a491e6">4.4.6. Post-mortem</a></li>
+</ul>
+</li>
+<li><a href="#org2fcaf68">4.5. <span class="done DONE">DONE</span> Office Return Keys</a></li>
+</ul>
+</li>
+<li><a href="#org447aa7d">5. Managing the List of Office Staff</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1b048b6" class="outline-2">
+<h2 id="org1b048b6"><span class="section-number-2">1.</span> Overview</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+I have been appointed office manager for the Spring 2023 term.
+Here are a few things I've been told I am responsible for:
+</p>
+<ul class="org-ul">
+<li>Assigning Office Keys</li>
+<li>Training Office Staff</li>
+<li>Overseeing CSC Swag selling in the office</li>
+</ul>
+
+<p>
+To begin, here are some pointers to office staff responsibilities.
+</p>
+<ul class="org-ul">
+<li><a href="https://wiki.csclub.uwaterloo.ca/Office_Staff">CSC Wiki Office Staff</a></li>
+</ul>
+
+<p>
+Some ideas for office this term:
+</p>
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Pruning the Office Staff list</li>
+<li class="off"><code>[&#xa0;]</code> Cleaning up the items in the office
+(and disposing of things that obviously really need to be disposed of)</li>
+<li class="on"><code>[X]</code> Trying to control the things that leave/enter the office</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5ddd8bd" class="outline-2">
+<h2 id="org5ddd8bd"><span class="section-number-2">2.</span> Office Budget Request</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A message from the treasurer:
+</p>
+<style>
+blockquote {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #FFF8DC;
+    border-left: 2px solid #ffeb8e;
+    border-left-color: rgb(255, 228, 102);
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+}
+</style>
+<blockquote>
+<p>
+Hey @Sean! Does the Office team have any expenses that you would like
+to include on the budget for this term? I was planning on requesting
+$300-$350 for pop (for context, last term we spent $336.08 on pop
+and this term is shorter/has fewer people), but if you would
+like funding for anything else, please provide the following:
+</p>
+<ul class="org-ul">
+<li>Expense</li>
+<li>Purpose of expense</li>
+<li>How much $$ you are asking for</li>
+<li>Supporting figures to justify why this is a fair amount</li>
+</ul>
+
+<p>
+We need to submit our budget to MathSoc by Friday, May 26 at 11:59 pm ET
+so it can be reviewed and approved at the budget meeting next week,
+so if you could send me this info as soon as you can
+or say that you don't want anything else, that would be great. Thanks!
+</p>
+</blockquote>
+
+<p>
+I have provided descriptions for each of the items I have requested. I have tried
+my best to provide amazon links for my breakdowns
+(the Amazon links are just a point of reference)
+</p>
+
+<p>
+<b>TLDR:</b>
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><b>Item</b></td>
+<td class="org-right"><b>Amount</b></td>
+<td class="org-left"><b>Notes</b></td>
+</tr>
+
+<tr>
+<td class="org-left">Thunderbolt Docks</td>
+<td class="org-right">904</td>
+<td class="org-left">This may have to go through syscom budget. - [1]</td>
+</tr>
+
+<tr>
+<td class="org-left">Cleaning Supplies</td>
+<td class="org-right">60</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Office Supplies</td>
+<td class="org-right">138</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<ul class="org-ul">
+<li><p>
+[1] From the syscom overlord
+</p>
+<pre class="example">
+you can do that
+but they might make you go through CIF
+in which case we can either do that or just file it under syscom budget
+</pre></li>
+</ul>
+</div>
+
+<div id="outline-container-org29e4668" class="outline-3">
+<h3 id="org29e4668"><span class="section-number-3">2.1.</span> Thunderbolt Docks</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+<b>Exposition</b> <br />
+Students frequently bring their own laptops to work in
+the CSC office.
+Thunderbolt docks enable people to
+</p>
+<ol class="org-ol">
+<li>Charge their laptop</li>
+<li>Use keyboards/mice at the office terminals</li>
+<li>Use the monitors by the office terminals</li>
+<li>Access the school network (wireless signal is poor in the office)</li>
+</ol>
+<p>
+using one cable.
+</p>
+
+<p>
+Termcom also benefits from this as people stop unplugging stuff from the office
+terminals and leaving a disaster of unplugged cables on the desk. 
+</p>
+
+<p>
+<b>Requested Budget: $904</b> <br />
+I am asking for enough budget to cover the cost of two more thunderbolt docks.
+Each dock costs <a href="https://www.amazon.ca/Anker-PowerExpand-Thunderbolt-Charging-Ethernet/dp/B087219P5J">$399 on Amazon</a>, and after tax the combined cost will be around $904.
+</p>
+
+<p>
+<a href="https://www.amazon.ca/Anker-PowerExpand-Thunderbolt-Charging-Ethernet/dp/B087219P5J">Link to Dock</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5199e7a" class="outline-3">
+<h3 id="org5199e7a"><span class="section-number-3">2.2.</span> Cleaning supplies</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+<b>Exposition</b> <br />
+It's pretty self-expanatory. We are running out of some cleaning supplies
+needed to keep our belongings clean.
+</p>
+
+<p>
+<b>Requested Budget: $60</b> <br />
+I am going to need some extra supplies for this term as the office ramps up
+to do a full office cleanup.
+</p>
+
+<p>
+Breakdown:
+</p>
+<ul class="org-ul">
+<li>99% Rubbing Alcohol for computer related cleaning (1 bottle, 500mL) - <a href="https://www.amazon.ca/s?k=rubbing+alcohol">$10 (Amazon)</a></li>
+<li>Disposable cleaning cloths for computer related cleaning - <a href="https://www.amazon.ca/s?k=cleaning+cloth">$10 (Amazon)</a></li>
+<li><del>Paper towels</del> &lt;- im sure we can get some if we ask nicely for some</li>
+<li>Garbage Bags</li>
+<li>Lysol Wipes for general surface cleaning - <a href="https://www.amazon.ca/Lysol-Disinfecting-Disinfectant-Cleaning-Sanitizing/dp/B002PNAU3M/">$14 x 2 (Amazon)</a>
+(we will probably go through one for cleanup)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9571f0f" class="outline-3">
+<h3 id="org9571f0f"><span class="section-number-3">2.3.</span> Office Supplies</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+<b>Exposition</b> <br />
+The office needs to replenish some supplies for typical business
+functions. Examples include paper, tape, and whiteboard markers.
+Furthermore, I am requesting some more budget for item organization.
+I want to purchase some "Bankers Boxes" which are just cardboard file
+boxes with lids. They are easy to carry and easy to open for access.
+</p>
+
+<p>
+<b>Requested Budget: $138</b> <br />
+This seems like a lot - that's because this includes
+the price of file boxes.
+</p>
+
+<p>
+Breakdown:
+</p>
+<ul class="org-ul">
+<li>Tape + Dispenser - <a href="https://www.amazon.ca/Scotch-Desk-Tape-Dispenser-Black/dp/B00006IF79/">$20 (Amazon)</a></li>
+<li>Paper - <a href="https://www.amazon.ca/AmazonBasics-Multipurpose-Copy-Paper-Bright/dp/B073H4VVC7/">$17 (Amazon)</a></li>
+<li>Label Maker Refills (mk231) - <a href="https://www.amazon.ca/PT-M95-P-Touch-Compatbile-Brother-M-Tape">$20 (Amazon)</a></li>
+<li>File Boxes (for general storage/organizaton) - <a href="https://www.amazon.ca/Bankers-Box-SmoothMove-Easy-Carry-7714203/dp/B00GMOOB08">$40 (Amazon)</a></li>
+<li>Plus some flexible budget for unforseen costs, e.g. - $25
+<ul class="org-ul">
+<li>File Folders</li>
+<li>Binders</li>
+<li>Stationery</li>
+<li>AA Batteries</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgfcddeea" class="outline-2">
+<h2 id="orgfcddeea"><span class="section-number-2">3.</span> CSC Office Expenditures</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org55e0331" class="outline-3">
+<h3 id="org55e0331"><span class="section-number-3">3.1.</span> Office Supplies</h3>
+<div class="outline-text-3" id="text-3-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Item</th>
+<th scope="col" class="org-right">Projected Cost</th>
+<th scope="col" class="org-right">Cost</th>
+<th scope="col" class="org-right">Diff</th>
+<th scope="col" class="org-left">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Tape Dispenser</td>
+<td class="org-right">20</td>
+<td class="org-right">10.03</td>
+<td class="org-right">9.97</td>
+<td class="org-left">Cheque Received</td>
+</tr>
+
+<tr>
+<td class="org-left">Office Boxes</td>
+<td class="org-right">40</td>
+<td class="org-right">32.18</td>
+<td class="org-right">7.82</td>
+<td class="org-left">Cheque Received</td>
+</tr>
+
+<tr>
+<td class="org-left">Card Sleeves</td>
+<td class="org-right">0</td>
+<td class="org-right">20.33</td>
+<td class="org-right">-20.33</td>
+<td class="org-left">Cheque Received</td>
+</tr>
+
+<tr>
+<td class="org-left">Expo Markers</td>
+<td class="org-right">0</td>
+<td class="org-right">21.80</td>
+<td class="org-right">-21.8</td>
+<td class="org-left">"</td>
+</tr>
+
+<tr>
+<td class="org-left">A6 Binder</td>
+<td class="org-right">0</td>
+<td class="org-right">15.81</td>
+<td class="org-right">-15.81</td>
+<td class="org-left">"</td>
+</tr>
+
+<tr>
+<td class="org-left">HDMI Cable</td>
+<td class="org-right">0</td>
+<td class="org-right">19.11</td>
+<td class="org-right">-19.11</td>
+<td class="org-left">Cheque Request Sent</td>
+</tr>
+
+<tr>
+<td class="org-left">USB-C Cable</td>
+<td class="org-right">0</td>
+<td class="org-right">18.07</td>
+<td class="org-right">-18.07</td>
+<td class="org-left">Not Purchased</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">TOTAL</td>
+<td class="org-right">138</td>
+<td class="org-right">137.33</td>
+<td class="org-right">0.67</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+This list is getting big.
+</p>
+<ul class="org-ul">
+<li>Coke</li>
+<li>Fruit soda/Root beer/sparkling water</li>
+<li>Fraps are very good, let's see if we can procure more.</li>
+<li>Canada Dry as a request</li>
+<li>Nestea for non-carbonated enjoyers</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9be30b5" class="outline-3">
+<h3 id="org9be30b5"><span class="section-number-3">3.2.</span> Pop Purchased</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Unfortunately, we were not able to find any Fraps during our Costco excursion.
+</p>
+</div>
+
+<div id="outline-container-org91973ff" class="outline-4">
+<h4 id="org91973ff"><span class="section-number-4">3.2.1.</span> Pop Run June 2nd 2023</h4>
+<div class="outline-text-4" id="text-3-2-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">Qty</th>
+<th scope="col" class="org-right">Number of Cans</th>
+<th scope="col" class="org-right">Cost per Unit ($)</th>
+<th scope="col" class="org-right">Tax</th>
+<th scope="col" class="org-right">Total Cost ($)</th>
+<th scope="col" class="org-right">Can Price ($)</th>
+<th scope="col" class="org-right">Projected Profit/Loss ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Arizona</td>
+<td class="org-right">2</td>
+<td class="org-right">24</td>
+<td class="org-right">19.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">39.98</td>
+<td class="org-right">1</td>
+<td class="org-right">8.02</td>
+</tr>
+
+<tr>
+<td class="org-left">Canada Dry</td>
+<td class="org-right">1</td>
+<td class="org-right">32</td>
+<td class="org-right">14.69</td>
+<td class="org-right">1.13</td>
+<td class="org-right">16.5997</td>
+<td class="org-right">0.5</td>
+<td class="org-right">-0.5997</td>
+</tr>
+
+<tr>
+<td class="org-left">Coke</td>
+<td class="org-right">1</td>
+<td class="org-right">32</td>
+<td class="org-right">14.69</td>
+<td class="org-right">1.13</td>
+<td class="org-right">16.5997</td>
+<td class="org-right">0.5</td>
+<td class="org-right">-0.5997</td>
+</tr>
+
+<tr>
+<td class="org-left">Nestea</td>
+<td class="org-right">1</td>
+<td class="org-right">24</td>
+<td class="org-right">11.69</td>
+<td class="org-right">1.00</td>
+<td class="org-right">11.69</td>
+<td class="org-right">0.5</td>
+<td class="org-right">0.31</td>
+</tr>
+
+<tr>
+<td class="org-left">Crush</td>
+<td class="org-right">1</td>
+<td class="org-right">32</td>
+<td class="org-right">14.49</td>
+<td class="org-right">1.13</td>
+<td class="org-right">16.3737</td>
+<td class="org-right">0.5</td>
+<td class="org-right">-0.3737</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Total</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">101.2431</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">6.7569</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-orgf86c57e" class="outline-4">
+<h4 id="orgf86c57e"><span class="section-number-4">3.2.2.</span> Pop Run June 15th 2023</h4>
+<div class="outline-text-4" id="text-3-2-2">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">Qty</th>
+<th scope="col" class="org-right">Number of Cans</th>
+<th scope="col" class="org-right">Cost per Unit ($)</th>
+<th scope="col" class="org-right">Tax</th>
+<th scope="col" class="org-right">Total Cost ($)</th>
+<th scope="col" class="org-right">Can Cost</th>
+<th scope="col" class="org-right">Can Price ($)</th>
+<th scope="col" class="org-right">Projected Profit/Loss ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Arizona</td>
+<td class="org-right">3</td>
+<td class="org-right">24</td>
+<td class="org-right">19.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">59.97</td>
+<td class="org-right">0.83291667</td>
+<td class="org-right">1</td>
+<td class="org-right">12.03</td>
+</tr>
+
+<tr>
+<td class="org-left">Pineapple Bubly</td>
+<td class="org-right">1</td>
+<td class="org-right">12</td>
+<td class="org-right">5.49</td>
+<td class="org-right">1.13</td>
+<td class="org-right">6.2037</td>
+<td class="org-right">0.516975</td>
+<td class="org-right">0.5</td>
+<td class="org-right">-0.2037</td>
+</tr>
+
+<tr>
+<td class="org-left">Vanilla Frap</td>
+<td class="org-right">1</td>
+<td class="org-right">12</td>
+<td class="org-right">29.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">29.99</td>
+<td class="org-right">2.4991667</td>
+<td class="org-right">3</td>
+<td class="org-right">6.01</td>
+</tr>
+
+<tr>
+<td class="org-left">Mocha Frap</td>
+<td class="org-right">2</td>
+<td class="org-right">12</td>
+<td class="org-right">29.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">59.98</td>
+<td class="org-right">2.4991667</td>
+<td class="org-right">3</td>
+<td class="org-right">12.02</td>
+</tr>
+
+<tr>
+<td class="org-left">San Pelligrino</td>
+<td class="org-right">2</td>
+<td class="org-right">6</td>
+<td class="org-right">7.79</td>
+<td class="org-right">1.13</td>
+<td class="org-right">17.6054</td>
+<td class="org-right">1.4671167</td>
+<td class="org-right">1.5</td>
+<td class="org-right">0.3946</td>
+</tr>
+
+<tr>
+<td class="org-left">Aloe</td>
+<td class="org-right">5</td>
+<td class="org-right">1</td>
+<td class="org-right">1.48</td>
+<td class="org-right">1.13</td>
+<td class="org-right">8.362</td>
+<td class="org-right">1.6724</td>
+<td class="org-right">2</td>
+<td class="org-right">1.638</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Total</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">182.1111</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">31.8889</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org2929979" class="outline-4">
+<h4 id="org2929979"><span class="section-number-4">3.2.3.</span> Pop Run Jul 12th 2023</h4>
+<div class="outline-text-4" id="text-3-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-right">Qty</th>
+<th scope="col" class="org-right">Number of Cans</th>
+<th scope="col" class="org-right">Cost per Unit ($)</th>
+<th scope="col" class="org-right">Tax</th>
+<th scope="col" class="org-right">Total Cost ($)</th>
+<th scope="col" class="org-right">Can Cost</th>
+<th scope="col" class="org-right">Can Price ($)</th>
+<th scope="col" class="org-right">Projected Profit/Loss ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Arizona</td>
+<td class="org-right">1</td>
+<td class="org-right">24</td>
+<td class="org-right">19.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">19.99</td>
+<td class="org-right">0.83291667</td>
+<td class="org-right">1</td>
+<td class="org-right">4.01</td>
+</tr>
+
+<tr>
+<td class="org-left">Mango Arizona</td>
+<td class="org-right">1</td>
+<td class="org-right">24</td>
+<td class="org-right">19.99</td>
+<td class="org-right">1.13</td>
+<td class="org-right">22.5887</td>
+<td class="org-right">0.94119583</td>
+<td class="org-right">1</td>
+<td class="org-right">1.4113</td>
+</tr>
+
+<tr>
+<td class="org-left">Coke</td>
+<td class="org-right">1</td>
+<td class="org-right">24</td>
+<td class="org-right">10.79</td>
+<td class="org-right">1.13</td>
+<td class="org-right">12.1927</td>
+<td class="org-right">0.50802917</td>
+<td class="org-right">0.5</td>
+<td class="org-right">-0.1927</td>
+</tr>
+
+<tr>
+<td class="org-left">Nestea</td>
+<td class="org-right">1</td>
+<td class="org-right">24</td>
+<td class="org-right">11.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">11.99</td>
+<td class="org-right">0.49958333</td>
+<td class="org-right">0.5</td>
+<td class="org-right">0.01</td>
+</tr>
+
+<tr>
+<td class="org-left">Mocha Frap</td>
+<td class="org-right">1</td>
+<td class="org-right">12</td>
+<td class="org-right">29.99</td>
+<td class="org-right">1.00</td>
+<td class="org-right">29.99</td>
+<td class="org-right">2.4991667</td>
+<td class="org-right">3</td>
+<td class="org-right">6.01</td>
+</tr>
+
+<tr>
+<td class="org-left">Aloe</td>
+<td class="org-right">6</td>
+<td class="org-right">1</td>
+<td class="org-right">1.48</td>
+<td class="org-right">1.13</td>
+<td class="org-right">10.0344</td>
+<td class="org-right">1.6724</td>
+<td class="org-right">2</td>
+<td class="org-right">1.9656</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">Total</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">106.7858</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">&#xa0;</td>
+<td class="org-right">13.2142</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge37ca9e" class="outline-3">
+<h3 id="orge37ca9e"><span class="section-number-3">3.3.</span> Pop Stock</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+This is too labour intensive to keep track of.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Day #</th>
+<th scope="col" class="org-left">Type/Date</th>
+<th scope="col" class="org-right">Arizona</th>
+<th scope="col" class="org-right">Canada Dry</th>
+<th scope="col" class="org-right">Coke</th>
+<th scope="col" class="org-right">Nestea</th>
+<th scope="col" class="org-right">Crush</th>
+<th scope="col" class="org-right">Bubly</th>
+<th scope="col" class="org-right">Vanilla Frap</th>
+<th scope="col" class="org-right">Mocha Frap</th>
+<th scope="col" class="org-right">S. Pelligrino</th>
+<th scope="col" class="org-right">Aloe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">Jun 2</td>
+<td class="org-right">48</td>
+<td class="org-right">32</td>
+<td class="org-right">32</td>
+<td class="org-right">24</td>
+<td class="org-right">32</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">Jun 5</td>
+<td class="org-right">38</td>
+<td class="org-right">32</td>
+<td class="org-right">32</td>
+<td class="org-right">24</td>
+<td class="org-right">32</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">Jun 7</td>
+<td class="org-right">25</td>
+<td class="org-right">32</td>
+<td class="org-right">32</td>
+<td class="org-right">24</td>
+<td class="org-right">32</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">Jun 9</td>
+<td class="org-right">16</td>
+<td class="org-right">27</td>
+<td class="org-right">26</td>
+<td class="org-right">19</td>
+<td class="org-right">29</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">Jun 13</td>
+<td class="org-right">4</td>
+<td class="org-right">26</td>
+<td class="org-right">22</td>
+<td class="org-right">17</td>
+<td class="org-right">27</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">Jun 15</td>
+<td class="org-right">72</td>
+<td class="org-right">26</td>
+<td class="org-right">22</td>
+<td class="org-right">17</td>
+<td class="org-right">27</td>
+<td class="org-right">12</td>
+<td class="org-right">12</td>
+<td class="org-right">24</td>
+<td class="org-right">12</td>
+<td class="org-right">5</td>
+</tr>
+
+<tr>
+<td class="org-right">21</td>
+<td class="org-left">Jun 23</td>
+<td class="org-right">47</td>
+<td class="org-right">23</td>
+<td class="org-right">13</td>
+<td class="org-right">12</td>
+<td class="org-right">20</td>
+<td class="org-right">8</td>
+<td class="org-right">4</td>
+<td class="org-right">15</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">27</td>
+<td class="org-left">Jun 29</td>
+<td class="org-right">24</td>
+<td class="org-right">21</td>
+<td class="org-right">8</td>
+<td class="org-right">9</td>
+<td class="org-right">16</td>
+<td class="org-right">6</td>
+<td class="org-right">0</td>
+<td class="org-right">9</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">36</td>
+<td class="org-left">Jul 8</td>
+<td class="org-right">0</td>
+<td class="org-right">16</td>
+<td class="org-right">0</td>
+<td class="org-right">2</td>
+<td class="org-right">7</td>
+<td class="org-right">1</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">40</td>
+<td class="org-left">Jul 12</td>
+<td class="org-right">48</td>
+<td class="org-right">6</td>
+<td class="org-right">24</td>
+<td class="org-right">24</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">12</td>
+<td class="org-right">0</td>
+<td class="org-right">6</td>
+</tr>
+
+<tr>
+<td class="org-right">45</td>
+<td class="org-left">Jul 17</td>
+<td class="org-right">31</td>
+<td class="org-right">5</td>
+<td class="org-right">19</td>
+<td class="org-right">21</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">7</td>
+<td class="org-right">0</td>
+<td class="org-right">1</td>
+</tr>
+
+<tr>
+<td class="org-right">50</td>
+<td class="org-left">Jul 22</td>
+<td class="org-right">5</td>
+<td class="org-right">0</td>
+<td class="org-right">12</td>
+<td class="org-right">15</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">3</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">59</td>
+<td class="org-left">Jul 31</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">7</td>
+<td class="org-right">6</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+
+<tr>
+<td class="org-right">67</td>
+<td class="org-left">Aug 8</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+<td class="org-right">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+<div id="outline-container-org705484a" class="outline-4">
+<h4 id="org705484a"><span class="section-number-4">3.3.1.</span> Graph of Pop Stock Over Time</h4>
+<div class="outline-text-4" id="text-3-3-1">
+
+<div id="org289d0a2" class="figure">
+<p><img src="./office_pop_graph.svg" alt="office_pop_graph.svg" class="org-svg" />
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org63d3ad9" class="outline-2">
+<h2 id="org63d3ad9"><span class="section-number-2">4.</span> Issues</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-org7d99cdb" class="outline-3">
+<h3 id="org7d99cdb"><span class="section-number-3">4.1.</span> <span class="done DONE">DONE</span> Membership Inquiries</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Removed .forward in home folder, which stops csc email from being forwarded to my school email.
+Will need to communicate new policy for membership inquiries - email membership@csclub.uwaterloo.ca
+</p>
+</div>
+</div>
+
+<div id="outline-container-org74b2e3c" class="outline-3">
+<h3 id="org74b2e3c"><span class="section-number-3">4.2.</span> <span class="todo TODO">TODO</span> Discuss Makerspace</h3>
+<div class="outline-text-3" id="text-4-2">
+<blockquote>
+<p>
+Hey Sean, its Keane here from CSC Reps.
+I had an idea for an office initiative called Makerspace run every alternate Friday
+Its just a 3-4 hour session where people can come to the office and work on anything but work or school or coop / interviews
+sometime to work on their passion project or cultivate a hobby, etc.
+I asked Kevin and Amy about this and they told me to talk to you about some drinks at the event
+I was thinking maybe some boba (but this might be a bit much)
+let me know, whats possible within budget this term otherwise next term
+</p>
+</blockquote>
+
+<p>
+Cool idea, should have some more discussion on this.
+Maybe pop vouchers instead of boba?
+</p>
+</div>
+</div>
+
+<div id="outline-container-org548defd" class="outline-3">
+<h3 id="org548defd"><span class="section-number-3">4.3.</span> <span class="done DONE">DONE</span> Office Acquisition of Stuff</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Office Boxes
+<ul class="org-ul">
+<li class="on"><code>[X]</code> Measure sizes of stuff</li>
+<li class="on"><code>[X]</code> Buy Boxes</li>
+</ul></li>
+<li class="on"><code>[X]</code> Tape</li>
+<li class="on"><code>[X]</code> Organize Library</li>
+<li class="on"><code>[X]</code> HDMI Cables</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb2288c0" class="outline-3">
+<h3 id="orgb2288c0"><span class="section-number-3">4.4.</span> <span class="done DONE">DONE</span> CSC Awards</h3>
+<div class="outline-text-3" id="text-4-4">
+<p>
+A goofy idea to just give out frivolous awards.
+</p>
+</div>
+
+<div id="outline-container-orge857579" class="outline-4">
+<h4 id="orge857579"><span class="section-number-4">4.4.1.</span> <span class="done DONE">DONE</span> Decide on a date</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+The date is Thursday July 20, 2023 at 4:00 PM.
+Event has been approved by MathSoc.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24a0f34" class="outline-4">
+<h4 id="org24a0f34"><span class="section-number-4">4.4.2.</span> <span class="done DONE">DONE</span> Prepare Awards to be handed out</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+Very nice awards, i.e.
+</p>
+
+
+<div id="org17a5e2d" class="figure">
+<p><img src="./L.png" alt="L.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org47e8740" class="outline-4">
+<h4 id="org47e8740"><span class="section-number-4">4.4.3.</span> Suggested Awards</h4>
+<div class="outline-text-4" id="text-4-4-3">
+<p>
+<code>X</code> denotes the awards that we will be following through with
+</p>
+
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Outstanding Office Manager of Spring 2023
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Sean Z</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Outstanding CSC Office Uptime of Spring 2023
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>CSC Office MC3036</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Outstanding CSC Non-Office Uptime of Spring 2023
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>CSC Systems Committee</li>
+</ul></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Best chair assemblers, all time
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Neil P. &amp; Aditya T.</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Most Codey Coins
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>DynamicSaurus22</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Best Spring 2023 Mathematics Society President, Spring 2023
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Grace [MathSoc President]</li>
+</ul></li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Most amount of time in CSC office while taking trains
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Elegy</li>
+<li>2pointwat</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Outstanding Sat Canceller
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Gordon L.</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Outstanding Cards Borrower
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Clyde (Frank)</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Lowest Energy in CSC Office
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>MCPenguin</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Best Trez Named Amy
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Amy :sunflower::moneybag:</li>
+</ul></li>
+</ul></li>
+<li class="on"><code>[X]</code> Least Rizz
+<ul class="org-ul">
+<li>Nominees:
+<ul class="org-ul">
+<li>Sat A</li>
+<li>Gordon L</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb442f6c" class="outline-4">
+<h4 id="orgb442f6c"><span class="section-number-4">4.4.4.</span> Award Details</h4>
+<div class="outline-text-4" id="text-4-4-4">
+<ol class="org-ol">
+<li><b>Outstanding CSC Office Uptime</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Oustanding CSC Office Uptime, Spring 2023</li>
+<li><b>Description</b> <br />
+This award recognizes a CSC office that has the most uptime during the term Spring 2023
+<ul class="org-ul">
+<li><b>Winner</b>: CSC Office</li>
+</ul></li>
+</ul></li>
+
+<li><b>Outstanding CSC Non-Office Uptime</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Oustanding CSC Non-Office Uptime, Spring 2023</li>
+<li><b>Description</b> <br />
+This award recognizes a CSC non-office that has the most uptime during the term Spring 2023
+<ul class="org-ul">
+<li><b>Winner</b>: CSC Systems Committee</li>
+</ul></li>
+</ul></li>
+
+<li><b>Most Codey Coins</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Oustanding Codey Coin Collector</li>
+<li><b>Description</b> <br />
+This award highlights the individual who has attained the most Codey Coins at the moment</li>
+<li><b>Winner</b>: DynamicSaurus22</li>
+</ul></li>
+
+<li><b>Best Trez Named Amy</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Oustanding CSC Treasurer, named Amy</li>
+<li><b>Description</b> <br />
+This award honours a member of our community who has contributed a lot as
+a treasurer named Amy.</li>
+<li><b>Introduction</b> <br />
+This award recognizes the outstanding work of a treasurer named Amy who has
+demonstrated exceptional financial management skills, leadership,
+and dedication. The treasurer plays a critical role in ensuring that our organization’s
+finances are managed effectively and efficiently. This award is a testament to the
+hard work and commitment of our treasurers who have gone above and beyond their
+duties to ensure that our organization is financially sound. We are proud to
+honor the best treasurer named Amy who has made a significant contribution to our organization’s success.</li>
+<li><b>Winner</b>: <code>Amy :sunflower: :moneybag:</code></li>
+</ul></li>
+
+<li><b>Best MathSoc President</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Oustanding CSC Member, Mathematics Society President, Spring 2023</li>
+<li><b>Description</b> <br />
+This award honours the most outstanding CSC member who is a MathSoc President during the term Spring 2023.</li>
+<li><p>
+<b>Introduction</b> <br />
+This award recognizes the outstanding achievements of our members who have demonstrated exceptional
+skills and dedication in the field of Mathematics Society Presidency. Our society is proud to
+honor these individuals who have made significant contributions to our
+community through their hard work and commitment.
+</p>
+
+<p>
+Tonight, we are here to recognize one of our members who has gone above and
+beyond their duties as president of the Mathematics Society during this term.
+This individual has shown exceptional leadership skills and has worked
+tirelessly to ensure that our society is successful. They have organized numerous events and
+activities that have helped to promote mathematics within our community. They have also been
+instrumental in building relationships with other organizations and institutions,
+which has helped to raise the profile of our CSC.
+</p>
+
+<p>
+It is my pleasure to announce that this term’s recipient of the Outstanding CSC Member, Mathematics Society President
+Award is [Name]. [He/She] has truly been an inspiration to us all, and we are proud
+to have [him/her] as a member of our society.
+[He/She] has shown us what it means to be dedicated and passionate about CSC,
+and we are grateful for all that [he/she] has done for us.
+</p>
+
+<p>
+So please join me in congratulating [Name] on this well-deserved award. Thank you for joining us tonight!"
+</p></li>
+<li><b>Winner</b>: <code>Grace [MathSoc President]</code></li>
+</ul></li>
+<li><b>Outstanding Sat Canceller</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Outstanding Member of the Cancel Sat Club, Spring 2023</li>
+<li><b>Description</b> <br />
+This award recognizes the efforts to coup and cancel our eternal president during the term Spring 2023.</li>
+<li><b>Winner</b>: <code>Gordon</code></li>
+</ul></li>
+<li><b>Lowest Energy In Office</b>
+<ul class="org-ul">
+<li><b>Official Title</b>: Outstanding Lack of Energy, Spring 2023</li>
+<li><b>Description</b>: This award recognizes the lack of effort. This guy is always bing chilling.</li>
+<li><b>Introduction</b>: Ladies and gentlemen, it is my pleasure to present the award
+for the lowest energy usage to MC Penguin. Our Mathematics and Computer resident Pingu has been a role model for
+all of us in his efforts to reduce his energy consumption. Minecraft Pingu has shown us that
+even small changes can make a big difference. His dedication to reducing his carbon footprint
+is truly inspiring. Congratulations Main Character Pingu!🎉🐧</li>
+<li><b>Winner</b>: MC Pingu</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org6aab04c" class="outline-4">
+<h4 id="org6aab04c"><span class="section-number-4">4.4.5.</span> Monologue</h4>
+<div class="outline-text-4" id="text-4-4-5">
+<p>
+Sure! Here's an example of a longer monologue for a computer science club awards ceremony with some jokes and humor:
+</p>
+
+<p>
+Begin Quote:
+"Good evening everyone! It is my pleasure to welcome you all to the Computer Science Club Awards Ceremony.
+This ceremony recognizes the outstanding achievements of our members who have demonstrated exceptional
+skills and dedication in the field of computer science. Our club is proud to honor these individuals
+who have made significant contributions to our community through their hard work and commitment.
+We are excited to present awards in various categories such as programming, web development,
+cybersecurity, and more. These awards are a testament to the hard work and dedication
+of our members who have gone above and beyond their duties to ensure that our club is successful.
+</p>
+
+<p>
+I'm sure you all know that computer science is a serious business. But that doesn't
+mean we can't have some fun along the way! So let's start with a joke:
+Why did the programmer quit his job? Because he didn't get arrays!
+</p>
+
+<p>
+Now, let's get back to business. We are proud of each and every one
+of our members who have worked hard to make our club successful. We are especially
+proud of those who have won awards tonight. You have shown us what
+it means to be dedicated and passionate about computer science.
+</p>
+
+<p>
+But let's not forget that there's more to life than just coding!
+So let's take a moment to appreciate the fact that we're all here together tonight,
+celebrating our achievements and having some fun along the way.
+</p>
+
+<p>
+And speaking of fun, did you hear about the computer programmer who got stuck
+in the shower? He read the shampoo bottle instructions: Lather, Rinse, Repeat.
+</p>
+
+<p>
+In all seriousness though, we are honored to have such talented and dedicated
+members in our club. You are the future of computer science, and we can't wait to see
+what you will accomplish next. Thank you for joining us tonight!"
+End Quote
+</p>
+
+<p>
+I hope this helps!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4a491e6" class="outline-4">
+<h4 id="org4a491e6"><span class="section-number-4">4.4.6.</span> Post-mortem</h4>
+<div class="outline-text-4" id="text-4-4-6">
+<p>
+Was fun!
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2fcaf68" class="outline-3">
+<h3 id="org2fcaf68"><span class="section-number-3">4.5.</span> <span class="done DONE">DONE</span> Office Return Keys</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Key holders need to return their keys before August 31. People can also
+hand the keys to me and I will return them.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org447aa7d" class="outline-2">
+<h2 id="org447aa7d"><span class="section-number-2">5.</span> Managing the List of Office Staff</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>OM will appoint regulars to the list of office staff based on the OM's judgement.</li>
+<li>Executives should be office trained IMO.</li>
+<li>Events team should have 2 people office trained (at least to understand CEO, and merch purchases), per office policy.</li>
+<li>Should refresh some staff on office rules/policies, as they change from term to term.</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

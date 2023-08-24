@@ -123,7 +123,7 @@ export default function Projects() {
         <ul style={{}}>
           {projectList.map(({ body, title, links, image }) => (
             <li className="border-b border-black" key={title}>
-              <div className="flex flex-row p-3 space-x-6 border-[0px] border-black items-between rounded-[10px]">
+              <div className="flex flex-row py-3 space-x-6 border-[0px] border-black items-between rounded-[10px]">
                 <div className="flex flex-col basis-1/2">
                   <h3>{title}</h3>
                   {body}
@@ -133,10 +133,7 @@ export default function Projects() {
                         return (
                           <>
                             {index !== 0 ? " | " : ""}
-                            <a
-                              className="underline"
-                              href={link}
-                            >
+                            <a className="underline" href={link}>
                               {label}
                             </a>
                           </>
