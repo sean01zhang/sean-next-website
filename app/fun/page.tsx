@@ -23,14 +23,15 @@ export default function Fun() {
         <h3>Notes</h3>
         <ul className="list-disc list-inside">
           <li>
-            <Link
-              className="underline"
-              href="https://csclub.uwaterloo.ca/~q434zhan/office/notes"
-            >
+            <Link className="underline" href="/notes/in-one-weekend-metal">
+              Ray Tracing in One Weekend using Metal
+            </Link>
+          </li>
+          <li>
+            <Link className="underline" href="/notes/in-one-weekend">
               Ray Tracing in One Weekend Notes
             </Link>
           </li>
-          <li>Ray Tracing in One Weekend Notes GPU</li>
         </ul>
         <h3>CSClub</h3>
         <p>
@@ -40,18 +41,12 @@ export default function Fun() {
         <ul className="list-disc list-inside">
           Links:
           <li>
-            <Link
-              className="underline"
-              href="https://csclub.uwaterloo.ca/~q434zhan/office/notes"
-            >
+            <Link className="underline" href="/notes/csclub/office-s23">
               Office Manager's S23 Notes
             </Link>
           </li>
           <li>
-            <Link
-              className="underline"
-              href="https://csclub.uwaterloo.ca/~q434zhan/office/help"
-            >
+            <Link className="underline" href="/notes/csclub/help">
               Office Staff Training Manual
             </Link>
           </li>

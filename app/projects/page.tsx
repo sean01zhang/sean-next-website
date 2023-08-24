@@ -21,7 +21,7 @@ const projectList = [
             Nvidia's ReSTIR paper
           </a>
         </p>
-        <p>Interactive demo coming soon!</p>
+        <p>Interactive web demo coming soon!</p>
       </>
     ),
     links: [],
@@ -53,7 +53,7 @@ const projectList = [
     links: [
       {
         label: "Notes",
-        link: "https://www.naesna.es/projects/graphics/in-one-weekend-metal",
+        link: "/notes/in-one-weekend-metal",
       },
       {
         label: "Source Code",
@@ -87,7 +87,7 @@ const projectList = [
     links: [
       {
         label: "Notes",
-        link: "https://www.naesna.es/projects/graphics/in-one-weekend",
+        link: "/notes/in-one-weekend",
       },
       {
         label: "Source Code",
