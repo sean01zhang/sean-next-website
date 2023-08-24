@@ -143,14 +143,17 @@ export default function Projects() {
                   </div>
                 </div>
                 <div
-                  className="basis-1/2 rounded-[5px] bg-gray-100 min-h-[220px]"
-                  style={{ border: "1px solid black", position: "relative" }}
+                  className="basis-1/2 rounded-[5px] bg-gray-100 min-h-[220px] border border-black"
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
                 >
-                  <Image
+                  <img
                     src={image.link}
                     alt={image.alt}
-                    fill={true}
-                    style={{ objectFit: "contain" }}
+                    className="max-h-[220px]"
                   />
                 </div>
               </div>
