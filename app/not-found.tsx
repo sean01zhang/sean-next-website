@@ -1,9 +1,6 @@
-import Link from "next/link";
-import Image from "next/image"
-import WorkMD from "./work.mdx"
-import Nav from "../nav";
+import Nav from "./nav";
 
-export default function Work() {
+export default function Error404() {
   return (
     <main
       className={`flex flex-wrap content-start md:flex-nowrap 
@@ -11,9 +8,7 @@ export default function Work() {
                 justify-center space-x-0 md:space-x-3 md:space-y-0 space-y-3`}
     >
       {/* this is the main layout*/}
-      <div
-        className="w-screen md:w-[40%] lg:w-[512px] space-y-3 sticky"
-      >
+      <div className="w-screen md:w-[40%] lg:w-[512px] space-y-3">
         <Nav />
       </div>
       <div
@@ -22,7 +17,8 @@ export default function Work() {
           animation: "appear 0.5s forwards",
         }}
       >
-        <WorkMD/>
+        <h2>404 - Page Not Found</h2>
+        <p>Sorry, but it looks like this page wasn't found.</p>
       </div>
     </main>
   );

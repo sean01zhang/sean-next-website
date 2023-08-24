@@ -12,8 +12,8 @@ export default function Home() {
         <div className="border-0 border-black px-2">
           <h3>Updates</h3>
           <ul>
-            <li>[08-23-2023] More fun!</li>
-            <li>[08-23-2023] More fun!</li>
+            <li>[08-24-2023] More fun!</li>
+            <li>[08-24-2023] Fun! Updated my favicon.</li>
             <li>[08-23-2023] Added Projects. Need to migrate notes.</li>
             <li>[08-22-2023] Added Work Summaries!</li>
             <li>[08-22-2023] Website Created. Stay tuned for more fun!</li>

@@ -2,6 +2,7 @@
 
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 import Link from "next/link";
+import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -45,7 +46,7 @@ export default function Nav() {
 
   return (
     <div className="p-2">
-      {/* <Image src="/sean.jpg" width={85} height={85} className="rounded-[5px] mb-2 menubutton" alt="profile"/> */}
+      {/* <Image src="/sean.jpg" width={85} height={85} className="rounded-[100px] mb-3 p-[0px] border-[0px] border-black" alt="profile"/> */}
       <h2>
         <Link
           className="hover:underline decoration-teal-600 decoration-2"
@@ -54,7 +55,7 @@ export default function Nav() {
           Sean Zhang
         </Link>
       </h2>
-      <h4>Computer Science Student at the University of Waterloo</h4>
+      <h4>4th Year CS Student at the University of Waterloo</h4>
       <p className="">
         <Link href="#">
           <u>Resume</u>
@@ -66,10 +67,9 @@ export default function Nav() {
         │{" "}
         <Link href="https://linkedin.com/in/sean01zhang">
           <u>LinkedIn</u>
-        </Link>{" "}
-        │ mail[at][domain]
+        </Link>
       </p>
-      <div className="space-y-2 mt-3">
+      <div className="space-y-2 mt-4">
         {[
           ["Work", "f0d6fc"],
           ["Projects", "d6eefc"],
