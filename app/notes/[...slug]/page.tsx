@@ -10,6 +10,19 @@ const allow: string[] = [
 
 const needsIndex: string[] = ["in-one-weekend", "in-one-weekend-metal"];
 
+export async function generateStaticParams() {
+  const posts = [
+    ["csclub", "help"],
+    ["csclub", "office-s23"],
+    ["in-one-weekend"],
+    ["in-one-weekend-metal"],
+  ];
+
+  return posts.map((post) => ({
+    slug: post,
+  }));
+}
+
 export default function Page({ params }: { params: { slug: string[] } }) {
   // add the .html to the url to get the new link
   const combined = params.slug.join("/");
