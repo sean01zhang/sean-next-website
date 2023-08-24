@@ -2,7 +2,7 @@
 
 import { AppRouterInstance } from "next/dist/shared/lib/app-router-context";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect } from "react";
 
@@ -42,7 +42,7 @@ export default function Nav() {
     router.prefetch("/work");
     router.prefetch("/projects");
     router.prefetch("/");
-  }, []);
+  }, [router]);
 
   return (
     <div className="p-2">
