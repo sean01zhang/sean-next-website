@@ -57,7 +57,7 @@ export default function Nav() {
       </h2>
       <h4>4th Year CS Student at the University of Waterloo</h4>
       <p className="">
-        <Link href="#">
+        <Link href="/sean_z_resume.pdf">
           <u>Resume</u>
         </Link>{" "}
         │{" "}

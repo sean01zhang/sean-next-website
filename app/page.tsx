@@ -12,6 +12,7 @@ export default function Home() {
         <div className="border-0 border-black px-2">
           <h3>Updates</h3>
           <ul>
+            <li>[08-31-2023] Added resume.</li>
             <li>[08-24-2023] Migrated notes.</li>
             <li>[08-24-2023] Fun! Updated my favicon.</li>
             <li>[08-23-2023] Added Projects. Need to migrate notes.</li>
